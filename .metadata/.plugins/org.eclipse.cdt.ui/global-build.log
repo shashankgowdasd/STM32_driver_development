@@ -1,0 +1,24 @@
+21:46:23 **** Incremental Build of configuration Debug for project STM32F4xx_device_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../drivers/Src/stm32f401re_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"G:/STM32/STM32_WORKSPACE/Driver_development/STM32F4xx_device_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"drivers/Src/stm32f401re_spi_driver.d" -MT"drivers/Src/stm32f401re_spi_driver.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "drivers/Src/stm32f401re_spi_driver.o"
+arm-none-eabi-gcc -o "STM32F4xx_device_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"G:\STM32\STM32_WORKSPACE\Driver_development\STM32F4xx_device_drivers\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F4xx_device_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F4xx_device_drivers.elf
+ 
+arm-none-eabi-size   STM32F4xx_device_drivers.elf 
+arm-none-eabi-objdump -h -S  STM32F4xx_device_drivers.elf  > "STM32F4xx_device_drivers.list"
+arm-none-eabi-objcopy  -O binary  STM32F4xx_device_drivers.elf  "STM32F4xx_device_drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+   2868	      8	   1568	   4444	   115c	STM32F4xx_device_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F4xx_device_drivers.list
+ 
+Finished building: STM32F4xx_device_drivers.bin
+ 
+21:46:35 **** Incremental Build of configuration Debug for project STM32F4xx_device_drivers ****
+make -j8 all 
+arm-none-eabi-size   STM32F4xx_device_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2868	      8	   1568	   4444	   115c	STM32F4xx_device_drivers.elf
+Finished building: default.size.stdout
+ 
